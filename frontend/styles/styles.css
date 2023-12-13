@@ -16,7 +16,14 @@ body {
 }
 
 h1, h2 {
+  display: flex;
   color: #93005a;
+  justify-content: center;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
 }
 
 #root {
