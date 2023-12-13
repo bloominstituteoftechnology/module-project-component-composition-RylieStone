@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
 import axios from 'axios'
-import { Await } from 'react-router-dom'
 
 function App() {
   function Card ({title, text, IMGurl, date}) {
@@ -18,7 +17,7 @@ function App() {
   const [picture, setPicture] = useState()
     
   useEffect(() => {
-      axios.get('http://localhost:9009/api/apod?api_key=DEMO_KEY')
+      axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
       .then(data => {setPicture(data.data)})
       .catch(err => console.error(err))
     }, [])
